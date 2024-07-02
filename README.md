@@ -22,43 +22,83 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Biblioteca API
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Este projeto é uma API de gerenciamento de biblioteca desenvolvida com NestJS e MongoDB. O foco principal do projeto é a implementação de testes e documentações para garantir a qualidade e a funcionalidade da API.
 
-## Installation
+## Tecnologias Utilizadas
+- NestJS
+- MongoDB
+- Jest
+- Swagger
+
+## Setup
+Instale as dependências
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+## Configuração do Banco de Dados
 
+Crie um banco chamado biblioteca.
+Altere o arquivo .env com a URL de conexão do MongoDB. Exemplo:
 ```bash
-# development
-$ npm run start
 
-# watch mode
-$ npm run start:dev
+ MONGO_URI=mongodb://localhost:27017/biblioteca
 
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+## Documentação com Swagger
 
-```bash
-# unit tests
-$ npm run test
+A documentação da API pode ser acessada em http://localhost:3000/Docs após iniciar o servidor.
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
+## Iniciando a API
+
+```
+npm run start:dev
 ```
 
-## Support
+## Testes
+
+```
+npm run test
+```
+
+## Documentação de Testes
+Os testes automatizados foram utilizando Jest
+### Testes de Unidade para LivroService
+- Criação de Livro.
+- Listagem de Todos os Livros.
+- Busca de Livro por ID.
+- Atualização de Livro.
+- Exclusão de Livro.
+
+## Testes Manuais com Insomnia
+Os testes manuais foram documentados em uma planilha de Excel, incluindo
+### Cadastro de Livros:
+- Enviar uma requisição POST para /livros
+- Verificar se o livro foi cadastrado corretamente.
+### Verificar se o livro foi cadastrado corretamente.
+- Enviar uma requisição POST para /livros com campos faltando.
+- Verificar se a API retorna erro 400 Bad Request.
+### Busca de Todos os Livros:
+- Enviar uma requisição GET para /livros
+- Verificar se a lista de livros está correta.
+### Atualização de Livros:
+- Enviar uma requisição PUT para /livros/{id}.
+- Verificar se os dados do livro foram atualizados.
+### Exclusão de Livros
+- Enviar uma requisição DELETE para /livros/{id}.
+- Verificar se o livro foi excluído corretamente.
+## Planilha de Documentação de Testes
+- ID: Identificador único do teste.
+- Funcionalidade: A funcionalidade sendo testada.
+- Passos: Passos necessários para realizar o teste.
+- Resultado Esperado: Resultado esperado do teste.
+- Resultado Obtido: Resultado obtido ao realizar o teste.
+- Status: Status do teste (passou/falhou).
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
