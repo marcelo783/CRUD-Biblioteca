@@ -36,7 +36,7 @@ Este projeto é uma API de gerenciamento de biblioteca desenvolvida com NestJS e
 Instale as dependências
 
 ```bash
-$ npm install
+ npm install
 ```
 
 ## Configuração do Banco de Dados
@@ -100,14 +100,4 @@ Os testes manuais foram documentados em uma planilha de Excel, incluindo
 - Resultado Obtido: Resultado obtido ao realizar o teste.
 - Status: Status do teste (passou/falhou).
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
